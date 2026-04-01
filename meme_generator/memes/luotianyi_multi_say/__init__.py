@@ -1,6 +1,8 @@
 from datetime import datetime
 from pathlib import Path
+
 from pil_utils import BuildImage
+
 from meme_generator import add_meme
 from meme_generator.exception import TextOverLength
 from meme_generator.tags import MemeTags
@@ -9,7 +11,12 @@ from meme_generator.utils import save_gif
 img_dir = Path(__file__).parent / "images"
 
 # 默认文本（2个词示例）
-default_text = ["啊→↑→↓→", "How I long~~\nTo embrace~~~","The future breaking~\nOut of shades","From the past\nStill ablaze!"]
+default_text = [
+    "啊→↑→↓→",
+    "How I long~~\nTo embrace~~~",
+    "The future breaking~\nOut of shades",
+    "From the past\nStill ablaze!",
+]
 
 
 def luotianyi_multi_say(images: list[BuildImage], texts: list[str], args):
@@ -45,8 +52,8 @@ def luotianyi_multi_say(images: list[BuildImage], texts: list[str], args):
 add_meme(
     "luotianyi_multi_say",
     luotianyi_multi_say,
-    min_texts=2,    # 最小2个文本
-    max_texts=10,   # 最大10个文本
+    min_texts=2,  # 最小2个文本
+    max_texts=10,  # 最大10个文本
     default_texts=default_text,
     keywords=["洛天依多说", "天依多说"],
     tags=MemeTags.luotianyi,
