@@ -19,7 +19,10 @@ _✨ 表情包生成器，用于制作各种沙雕表情包 ✨_
 
 </div>
 
-表情包制作 Rust 版 [--> meme-generator-rs <--](https://github.com/MemeCrafters/meme-generator-rs)
+> [!NOTE]
+> 本项目另有 Rust 重构版 [--> meme-generator-rs <--](https://github.com/MemeCrafters/meme-generator-rs)
+> 
+> 拥有更小的内存占用和更快的运行速度，欢迎使用！
 
 ## 表情列表
 
@@ -29,11 +32,31 @@ _✨ 表情包生成器，用于制作各种沙雕表情包 ✨_
 
 详见 Wiki：[--> Wiki <--](https://github.com/MemeCrafters/meme-generator/wiki)
 
-## 开发
+## 其他表情
 
-如果希望编写、贡献新的表情，可以参考 [--> 新表情编写指北 <--](https://github.com/MemeCrafters/meme-generator/wiki/%E6%96%B0%E8%A1%A8%E6%83%85%E7%BC%96%E5%86%99%E6%8C%87%E5%8C%97)
+可以加载非本仓库内置的表情，参考 [--> 加载其他表情 <--](https://github.com/MemeCrafters/meme-generator/wiki/%E5%8A%A0%E8%BD%BD%E5%85%B6%E4%BB%96%E8%A1%A8%E6%83%85)
 
-对于一些不适合放在主仓库的表情，可以提交至 [--> 额外表情仓库 <--](https://github.com/MemeCrafters/meme-generator-contrib)
+其他表情仓库：
+- [MemeCrafters/meme-generator-contrib](https://github.com/MemeCrafters/meme-generator-contrib) meme-generator 额外表情仓库
+- [anyliew/meme_emoji](https://github.com/anyliew/meme_emoji) 更多热门表情包模板
+- [LRZ9712/tudou-meme](https://github.com/LRZ9712/tudou-meme) 手搓的一些表情包模版
+
+## 已知问题
+
+- Windows 下程序无报错退出
+
+需要安装 [Visual C++ 运行时](https://aka.ms/vs/17/release/VC_redist.x64.exe)
+
+相关 Issue：https://github.com/kyamagu/skia-python/issues/289
+
+- Linux 下字体异常
+
+设置 locate 为英文：
+```
+export LANG=en_US.UTF-8
+```
+
+相关 Issue：https://github.com/rust-skia/rust-skia/issues/963
 
 ## 声明
 
